@@ -42,13 +42,13 @@
                 <div class="container-message">
                     <div id="message-tweet">
                         <!--Seccion de entrada del mensajes-->
-                        <textarea id="insertText" type="text" placeholder="¿Qué estas pensando?"></textarea>
+                        <textarea id="insertText" type="text" placeholder="¿Qué estas pensando?" style></textarea>
                     </div>
-                    <div id="account">140</div>
+                    <div id="account" style>140</div>
                 </div>
                 <div class="button-tweet">
                     <img class="settings" src="assets/images/media.png">
-                    <button id="submit" type="button">Twittear</button>
+                    <button id="submit" type="button" disabled>Twittear</button>
                 </div>
             </form>
             <!--Seccion para nuevas cajas donde se almacenaran los tweet con fecha respectiva-->
@@ -57,7 +57,7 @@
         </div>    
     </section>   
     <!--Enlazamos nuestro archivo js extero para agregar tiempo a cada tweet que se realiza-->
-    <script type="text/javascript" src="js/moment.js"></script>
+    <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
     <!--Enlazamos nuestro archivo js extero para darle animacion a cada elemento-->
     <script type="text/javascript" src="js/app.js"></script>
 </body>

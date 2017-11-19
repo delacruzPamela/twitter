@@ -113,7 +113,6 @@ input {
 
 #account {
     display: inline-block;    
-    color: #325d81;
     font-size: 15px;
     font-weight: bold;
     margin-left: auto;
@@ -158,12 +157,20 @@ button:disabled,button[disabled]{
     width: 600px;
     margin-top: 20px;
 }
+
 #newbox div {
     background-color: white;
-    padding: 5px;
+    padding: 7px;
     margin-top: 2px;
     border: 1px solid #E0F7FA;
     word-break: break-all
+}
+
+#newbox p {
+    color: rgb(99, 95, 95);
+    font-weight: bold;
+    padding-top: 6px;
+    margin-left: 500px;
 }
 
 
