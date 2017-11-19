@@ -1,50 +1,50 @@
 var insertText = document.getElementById('insertText');
-var submit = document.getElementById('submit');
-submit.disabled = true;
+var sendTwitt = document.getElementById('submit');
+sendTwitt.disabled = true;
 
-var newbox = document.getElementById('newbox');
+var newBox = document.getElementById('newbox');
 
 // 2°Agregar un evento de click al botón o de submit al formulario.
-submit.addEventListener('click', function() {
+sendTwitt.addEventListener('click', function() {
   // verificamos si esta vacio o hay texto
   if (insertText.value.length > 0) {
-    var newcontainer = document.createElement('div'); /* Creamos un div que almacenara el nuevo texto*/
-    var newtext = document.createElement('p'); /* Creamos parrafo que contendra la hora */
+    var newContainer = document.createElement('div'); /* Creamos un div que almacenara el nuevo texto*/
+    var newText = document.createElement('p'); /* Creamos parrafo que contendra la hora */
     var time = moment().format('LT');
-    newtext.innerHTML = time;   
-    newcontainer.innerHTML = insertText.value;//
-    newcontainer.appendChild(newtext); //
-    newbox.appendChild(newcontainer); //
+    newText.innerHTML = time;   
+    newContainer.innerHTML = insertText.value;//
+    newContainer.appendChild(newText); //
+    newBox.appendChild(newContainer); //
     insertText.value = ''; // Limpiar la caja despues de crear la newcaja
    
-    //  validacion si pasa los 140 caracteres deshabilita boton.
+    //  validacion desabilitar boton si ya realizo su twitt y no exedio los 140 caracteres.
     var account = document.getElementById('account');
     account.textContent = '140';
     account.style = '#325d81';
-    submit.disabled = true;
+    sendTwitt.disabled = true;
     insertText.style = 'initial';
   } else {
-    submit.disabled = true;
+    sendTwitt.disabled = true;
   }
 });
 
-// funcion que valida numero de caracteres.
+// Funcion Valida numero de caracteres
 insertText.addEventListener('keyup', function() {
-  submit.disabled = false;
+  sendTwitt.disabled = false;
   var max = 140;
   var rest = '';
-  var publications = insertText.value.length;
-  rest = max - publications;
+  var publication = insertText.value.length;
+  rest = max - publication;
   account.value = rest;
-  // Deshabilita el boton cuando no se ingresa texto.
+  // Deshabilitar boton twittear cuando exede el texto establecido (140)
   account.innerHTML = rest;
   if (account.value < 0) {
-    submit.disabled = true;
-  } else if (account.value < 10) {
-    account.style.color = '#ff0000';
-  } else if ( account.value >= 10 && account.value <20) {
-    account.style.color = '#ff9900';
+    sendTwitt.disabled = true;
+  } else if (account.value < 1) {
+    account.style.color = '#B71C1C'; /* Fuera del rango Color rojo */
+  } else if (10 >= account.value  && account.value >= 1) {
+    account.style.color = '#2E7D32'; /* Advertencia Color verde */
   } else {
-    account.style.color = '#325d81';
+    account.style.color = '#325d81'; /* Iniciando escritura Color azul */
   }
 });
