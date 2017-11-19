@@ -24,7 +24,7 @@
             <li><button>Twittear</button></li>
         </ul>        
     </header>
-    <!--Creando contenido 2 columnas-->
+    <!--Creando seccion para biografia del usuario-->
     <section>
         <div id="first-section">
             <div class="biography">
@@ -35,24 +35,27 @@
             </div>
         </div>
     </section>
-    <!--Seccion para comentarios nuevos-->
+    <!--Seccion para twwets-->
     <section>
         <div id="second-section" class="">
             <form class="container-form" name="container-form">
                 <div class="container-message">
-                    <div id="message">
+                    <div id="message-tweet">
                         <!--Seccion de entrada del mensajes-->
-                        <textarea id="textTarea" type="text" placeholder="¿Qué estas pensando?"></textarea>
+                        <textarea id="insertText" type="text" placeholder="¿Qué estas pensando?"></textarea>
                     </div>
                     <div id="account">140</div>
                 </div>
                 <div class="button-tweet">
                     <img class="settings" src="assets/images/media.png">
-                    <button id="button" class="button" disabled="disabled">Twittear</button>
+                    <button id="submit" type="button">Twittear</button>
                 </div>
-            </form>            
-        </div>          
-    </section>
+            </form>
+            <!--Seccion para nuevas cajas donde se almacenaran los tweet con fecha respectiva-->
+            <div id="newbox">
+            </div>            
+        </div>    
+    </section>   
     <!--Enlazamos nuestro archivo js extero para agregar tiempo a cada tweet que se realiza-->
     <script type="text/javascript" src="js/moment.js"></script>
     <!--Enlazamos nuestro archivo js extero para darle animacion a cada elemento-->

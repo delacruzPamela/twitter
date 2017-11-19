@@ -92,7 +92,7 @@ input {
 }
 
 /*entrada del texto*/
-#textTarea{
+#insertText {
     resize: none;
     border: none;
     font-size: 1.2rem;
@@ -102,11 +102,11 @@ input {
     overflow: hidden;
     margin:0px auto;
 }
-#textTarea:focus{
+#insertText:focus {
     outline:0px;
 }
 
-#message {
+#message-tweet {
     display: inline-block;
     margin: 10px;
 }
@@ -151,6 +151,21 @@ button:disabled,button[disabled]{
     background-color: #a4caec;
     color: #fff;
 }
+
+/*STYLE FOR THE NEW BOX TWEET*/
+#newbox {
+    /*outline: 1px solid gold;*/
+    width: 600px;
+    margin-top: 20px;
+}
+#newbox div {
+    background-color: white;
+    padding: 5px;
+    margin-top: 2px;
+    border: 1px solid #E0F7FA;
+    word-break: break-all
+}
+
 
 
 
