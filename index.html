@@ -5,14 +5,57 @@
     <title>Twitter</title>
    <!--Agregamos una imagen a nuestra pestaña del navegador-->
    <link rel="shorcut icon" type="image" href="assets/images/logo.png">
+   <!--Enlazamos con iconos-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--Enlazamos iconos de Font Awesome-->   
    <!--Linkeamos nuestro archivo externo main.css para que pueda dar estilo a nuestro documento html-->
    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <!--Creando titulo general-->
-    <header>   
-        <h1>Twitter</h1>
+    <!--Creando el menu de navegador para twitter-->
+    <header>
+        <ul>
+            <li class="fa fa-home"><a href="#">Inicio</a></li>
+            <li class="fa fa-bell-o"><a href="#">Notificaciones</a></li>
+            <li class="fa fa-envelope-o"><a href="#"></i>Mensajes</a></li>
+            <li class="tweeter"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></li>
+            <li class="search"><input type="text" name="" value="Busca en twitter">
+                <i class="fa fa-search" aria-hidden="true"></i></li>
+            <li class="user"><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i></li>
+            <li><button>Twittear</button></li>
+        </ul>        
     </header>
-    <img src="assets/images/biografia.png" alt="biografia" >
+    <!--Creando contenido 2 columnas-->
+    <section>
+        <div id="first-section">
+            <div class="biography">
+                <img src="assets/images/biografia.png" alt="biografia">
+            </div>
+            <div class="trends">
+                <img src="assets/images/tendencias.png" alt="tendencias">
+            </div>
+        </div>
+    </section>
+    <!--Seccion para comentarios nuevos-->
+    <section>
+        <div id="second-section" class="">
+            <form class="container-form" name="container-form">
+                <div class="container-message">
+                    <div id="message">
+                        <!--Seccion de entrada del mensajes-->
+                        <textarea id="textTarea" type="text" placeholder="¿Qué estas pensando?"></textarea>
+                    </div>
+                    <div id="account">140</div>
+                </div>
+                <div class="button-tweet">
+                    <img class="settings" src="assets/images/media.png">
+                    <button id="button" class="button" disabled="disabled">Twittear</button>
+                </div>
+            </form>            
+        </div>          
+    </section>
+    <!--Enlazamos nuestro archivo js extero para agregar tiempo a cada tweet que se realiza-->
+    <script type="text/javascript" src="js/moment.js"></script>
+    <!--Enlazamos nuestro archivo js extero para darle animacion a cada elemento-->
+    <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>

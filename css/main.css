@@ -1,33 +1,173 @@
 /* CLASES REUTILIZABLES */
 * {
-    /*backgrounf #C0DEED, links #0064B4*/
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box; /*respetamos altos y anchos*/
     margin:0;
     padding: 0; /*ocupa toda la pantalla*/
 }
 body {
-    background-color: #C0DEED;
+    background-color: #e6ecf0;
+    font-family: arial;
 }
 /*--STYLE FOR THE HEADER--*/
 header {
-    background-color: #0064B4; 
-    position: fixed;
-    top: 0; /*Se peque la parte duperior del navegador*/
+    background-color: white; 
+    top: 0; /*Se pegue la parte duperior del navegador*/
     width: 100%; /*Tomara todo el navegador*/
     height: 50px; /*Alto de header*/
-    z-index: 1000; /* 6 z-index-> sirve para trabajar por capas (traer adelante on retroceder capas antes o delante de otro)*/ 
+    position: fixed;
 }
 
-h1 {
-    font-family: "Montserrat",'Helvetica Neue',Helvetica,Arial,sans-serif;      
+ul {
+    margin-left: 185px;
+}
+
+li {
+    display: inline-block;
+    margin: 10px;
+}
+
+a {
+    text-decoration: none;
+    color:#212F3C;    
+    font-family: arial;
+    font-weight: bold;
+    padding: 3px;
+}
+
+.tweeter {
+    margin: 0 200px 0 200px; 
+    color:#5DADE2;
+}
+
+li {
+    color: gray;
+}
+
+input {
+    background-color: transparent;
+    border: none;
+    font-size: 0.8rem;
+    color: gray;
+}
+
+.search {
+    /*outline: 1px solid red;*/
+    border-radius: 20px;
+    padding: 9px;
+    background-color: #EBF5FB;
+    margin-bottom: 3px;
+    border: 1px solid rgb(193, 222, 243);
+}
+
+/*STYLE FOR THE FIRST SECION*/
+#first-section {
+    /*outline: 1px solid red;*/
+    margin: 60px 20px 20px 200px;
+    float: left;
+}
+
+.biography {
+    margin-bottom: 8px;
+}
+
+/*STYLE FOR THE SECOND SECTION*/
+#second-section {
+    /*outline: 1px solid green;*/
+    display: inline-block;
+    margin-top: 63px;
+}
+
+.container-form {
+    background-color: #E0F7FA;
+    padding: 10px;
+}
+
+/*formulario*/
+.container-message {
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid rgb(39, 149, 161);
+    margin: 10px;
+    padding-right: 7px;
+}
+
+/*entrada del texto*/
+#textTarea{
+    resize: none;
+    border: none;
+    font-size: 1.2rem;
+    width: 500px;
+    height:60px;
+    line-height: 17px;
+    overflow: hidden;
+    margin:0px auto;
+}
+#textTarea:focus{
+    outline:0px;
+}
+
+#message {
+    display: inline-block;
+    margin: 10px;
+}
+
+#account {
+    display: inline-block;    
+    color: #325d81;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: auto;
+}
+
+.settings{
+    margin: 0 230px 0 18px;
+}
+
+/*STYLE FOR THE BOTTON TWEET*/
+button {
+    background:#1da1f2;
+    color:#fff;
+    border: none;
+    padding: 5px 10px;
+    font-weight:700;
+    font-size: 1.3rem;
+    border-radius: 20px;
     text-align: center;
-    color: white;
-    font-weight: bolder; /*El navegador tendra letras gruesas*/    
 }
 
-img {
-    padding-top: 60px;
-    margin-left: 30px;
+button:hover {
+    background-color:#006dbf;
+    color: #ffffff;
+    border-radius: 20px;
+    cursor: pointer;
 }
+
+button:active{
+    border-radius: 5px;
+    background-color:#006dbf;
+}
+
+button:disabled,button[disabled]{
+    background-color: #a4caec;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
