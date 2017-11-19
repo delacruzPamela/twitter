@@ -2,7 +2,6 @@ window.addEventListener('load', function() {
   var insertText = document.getElementById('insertText');
   var sendTwitt = document.getElementById('submit');
   sendTwitt.disabled = true;
-
   var newBox = document.getElementById('newbox');
 
   // 2°Agregar un evento de click al botón o de submit al formulario.
